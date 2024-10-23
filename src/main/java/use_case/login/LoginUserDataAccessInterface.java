@@ -27,5 +27,19 @@ public interface LoginUserDataAccessInterface {
      */
     User get(String username);
 
+    /**
+     * Sets the current user to the provided username.
+     * This method is used to track which user is currently logged in.
+     *
+     * @param name the username of the user who has just logged in
+     */
     void setCurrentUser(String name);
+
+    /**
+     * Returns the username of the current logged-in user.
+     * If no user is logged in, this method should return null.
+     *
+     * @return the username of the current user, or null if no user is logged in
+     */
+    String getCurrentUser();
 }
